@@ -6,5 +6,7 @@ https://www.w3schools.com/jsref/met_win_settimeout.asp
 */
 
 function helloFromTheFuture() {
-	console.log("Hello from the future!");
+  console.log("Hello from the future!");
 }
+
+setTimeout(helloFromTheFuture, 5000);

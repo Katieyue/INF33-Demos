@@ -6,17 +6,30 @@
 
 // see setup1.html : <body onload="runJS()">
 function runJS() {
-	
+	setTimeout(makeTitleBlue, 1000); // in milliseconds
+	setTimeout(addLoremIpsum, 2000);
+	setTimeout(addNewParagraph, 3000);
 }
 
 function makeTitleBlue () {
-
+	var h1Tags = document.getElementsByTagName("h1"); // can't do for each
+	for (var i = 0; i < h1Tags.length; i++) {
+		h1Tags[i].classList.add('title');
+		h1Tags[i].style.color="blue";
+	}
 }
 
 function addLoremIpsum () {
-
+	var firstTag = document.getElementById("first")
+	firstTag.textContent = 'Lorem ispum amet';
 }
 
 function addNewParagraph () {
+	var div = document.getElementById("body");
+	var newElement = document.createElement('p');
+	newElement.textContent = "a new paragraph";
+	newElement.classList.add("title");
+
+	div.appendChild(newElement);
 
 }
