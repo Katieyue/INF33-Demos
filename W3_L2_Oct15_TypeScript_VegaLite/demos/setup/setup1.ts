@@ -4,8 +4,14 @@
  - How does that change which function calls are legal?
 */
 
+function joinNTimes(arrOfStr:string[], joinStr:string, n:number) {
+    var joinedStr:string = '';
+    for (var i = 0; i < n; i++) {
+        joinedStr += arrOfStr.join(joinStr) + '\n';
+    }
+    return joinedStr;
+}
 
-
-//console.log(joinNTimes(['hello', 'my', 'name', 'is', 'theresa'], ' ', 3));
-//console.log(joinNTimes(['in4matx', 133], '-', 2))
-//console.log(joinNTimes(['two', 'too', 'to'], 2, 4))
+console.log(joinNTimes(['hello', 'my', 'name', 'is', 'theresa'], ' ', 3));
+console.log(joinNTimes(['in4matx', 133], '-', 2))
+console.log(joinNTimes(['two', 'too', 'to'], 2, "blah"))
